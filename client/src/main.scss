@@ -1,0 +1,19 @@
+// Change the primary colour
+$primary: rgb(207, 44, 4);
+
+// Set the sans-serif font
+$font-family-sans-serif: Sora, sans-serif;
+
+// Make headings bolder!
+$headings-font-weight: 700;
+
+// Thicken up our borders
+$border-width: 3px;
+
+// Remove the border-radius everywhere
+$border-radius: 0;
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
