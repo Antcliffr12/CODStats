@@ -57,15 +57,6 @@ function Home(props) {
                         handlechange={handleSelect}
 
                     />{""}
-
-                    {/* <Select
-                        title={"Gender"}
-                        name={"gender"}
-                        options={this.state.genderOptions}
-                        value={this.state.newUser.gender}
-                        placeholder={"Select Gender"}
-                        handleChange={this.handleInput}
-                        />{" "} */}
                     <Input
                         input={"text"}
                         name={"username"}
