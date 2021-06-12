@@ -20,7 +20,7 @@ app.get("/api", (req, res) => {
 const login = async () => {
 
     try {
-        const login = await API.login('antcliffryan@yahoo.com', 'Sports99');
+        const login = await API.login('user, 'pass');
         console.log(login);
         console.log('Credentails Valid');
     } catch (err) {
@@ -46,51 +46,6 @@ app.get('/warzone/profile/:platform/:user/overview', async (req, res) => {
     }
 })
 
-// app.get('/api/test/', async (req, res) => {
-//     await API.MWwz('antcliffr12', 'psn')
-//         .then(response => response)
-//         .then(function (data) {
-//             res.json({ data });
-//     })
-// })
-
-// app.post("/api/test", async (req, res) => {
-//     //res.send('/test')
-//     try {
-//         console.log(req.body.user)
-//     } catch (err) {
-//         console.log(err);
-//     }
-// });
-
-// app.route('/api/test')
-//     .post(async (req, res) => {
-//         res.send(req.body.user)
-//         console.log(req.body.user)
-//     })
-//     .get(async (req, res) => {
-//         await API.MWwz('antcliffr12', 'psn')
-//             .then(response => response)
-//             .then(function (data) {
-//                 res.json({ data });
-//             })
-//     })
-
-// app.get("/api/test", async (req, res) => {
-//     res.send('/test')
-//     // try {
-//     //     await API.MWwz('antcliffr12', 'psn')
-//     //         .then(response => response)
-//     //         .then(function (data) {
-//     //            return res.json({ data });
-//     //         })
-//     // }catch(err){
-//     //     console.log(err);
-//     // }
-
-   
-
-// })
 
 
 
