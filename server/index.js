@@ -12,15 +12,10 @@ app.use(cors())
 app.use(express.json())
 
 
-app.get("/api", (req, res) => {
-    console.log('api');
-    res.json({ message: "Hello from server" });
-})
-
 const login = async () => {
 
     try {
-        const login = await API.login('user, 'pass');
+        const login = await API.login('antcliffryan@yahoo.com', password);
         console.log(login);
         console.log('Credentails Valid');
     } catch (err) {
@@ -31,10 +26,12 @@ const login = async () => {
 }
 login();
 
-app.get('/warzone/profile/:platform/:user/overview', async (req, res) => {
+app.get('/api/warzone/standard/matches/:platform/:user/', async (req, res) => {
     try {
         const user = req.params.user;
-        await API.MWwz(user, 'xbl')
+        const platform = req.params.platform;
+        await API.MWcombatwz(user, platform)
+
         .then(response => response)
         .then(function (data) {
             res.json({ data });
@@ -46,10 +43,34 @@ app.get('/warzone/profile/:platform/:user/overview', async (req, res) => {
     }
 })
 
+app.get('/api/warzone/standard/profile/:platform/:user/', async (req, res) => {
+    try {
+        const user = req.params.user;
+        const platform = req.params.platform;
+        await API.MWwz(user, platform)
+        .then(response => response)
+        .then(function (data) {
+            res.json({ data });
+        })
+    }catch (err) {
+        res.json({ error: err.message})
+    }
+})
 
+app.get('/api/warzone/standard/matches/weekly/:platform/:user', async (req, res) => {
+    try {
+          const user = req.params.user;
+        const platform = req.params.platform;
+        await API.MWAnalysis(user, platform)
 
-
-
+        .then(response => response)
+        .then(function (data) {
+            res.json({ data });
+        })
+    }catch (err) {
+        res.json({ error: err.message})
+    }
+})
 
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`)
