@@ -1,0 +1,263 @@
+.imageCenter{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+}
+
+.matches{
+    border-radius: unset;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    border: 1px solid #363B40;
+    background-color: #2B2F33;
+    margin: .75rem;
+    overflow: hidden;
+
+    .header_flex{
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1rem 1.25rem;
+        
+        .left{
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+
+            .icon{
+                height: 2rem;
+                width:2rem;
+                margin-right:.75rem;
+                fill:#BFAE86;
+            }
+
+            .title{
+                color:#ffffff;
+                font-size: 1.5rem;
+                font-weight: 500;
+                padding-bottom: .25rem;
+            }
+
+            .description{
+                color:#BAC3CF;
+                font-size: .875rem;
+                font-weight: 500;
+            }
+        }
+
+        .right{
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    //last seven card on top of game list 
+    .lastSeven-stats{
+        display: flex;
+        flex-direction: row;
+        padding:1.25rem;
+        justify-content: space-between;
+        background-color: #363B40;
+
+        .left-stats{
+            flex-wrap: wrap;
+            flex-direction: row;
+            display: flex;
+
+            .label{
+                margin-bottom: .25rem;
+                color: #BAC3CF;
+                font-size: .75rem;
+                font-weight: 500;
+            }
+        }
+    }
+
+    //game list 
+    .gameReport-list{
+        margin:0;
+
+        .gameReport-list_group{
+            .gameReport-list_group-title{
+                margin: 0!important;
+                padding-left:unset;
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                position: relative;
+
+                .session-header{
+                    lign-items: center;
+                    background-image: linear-gradient(90deg,#2B2F33,#3D444D);
+                    display: flex;
+                    flex: 1;
+                    flex-flow: wrap;
+                    justify-content: space-between;
+                    min-height: 5rem;
+                    padding: .5rem 1.5rem;
+                    width: 100%;
+                    .header_metadata{
+                        .session-header_title{
+                            font-size: 1.125rem;
+                            font-weight: 500;
+                            margin-bottom: .125rem;
+                            color:#ffffff;
+
+                            .badge{
+                                font-weight: 500;
+                                margin-left: 1rem;
+                                display: inline-flex;
+                                font-size: .75rem;
+                                line-height: .75rem;
+                                font-weight: 700;
+                                border-radius: .625rem;
+                                padding: .25rem .5rem;
+                                min-width: 1.25rem;
+                                text-align: center;
+                                white-space: nowrap;
+                                text-overflow: clip;
+                                overflow: hidden;
+                            }
+
+                            .badge--secondary{
+                                background: #555D68;
+                                border-color: #555D68;
+
+                            }
+                        }
+                        .session-header_summary{
+                            display: flex;
+                            font-weight: 500;
+                            color:#ffffff;
+                            .wins{
+                                color:rgb(89, 255, 150);
+                                margin-left:.2rem;
+                            }
+                            div{
+                                &:not(:last-child)::after{
+                            
+                                    content: "\B7";
+                                    margin: 0 .35rem;
+                                }
+                            }
+
+                            .top{
+                                margin-left:.2rem;
+                                color:rgb(191, 174, 134);
+                            }
+                        }
+                    }
+
+                    .session-header_stats{
+                            display: flex;
+                            padding-right: 2.5rem;
+                            text-align: right;
+
+                            .session-header_stats-stat{
+                                margin: 0 1rem;
+                                max-width: 8.5rem;
+                                min-width: 3.25rem;
+
+                                .session-header_label{
+                                    color:#BAC3CF;
+                                    font-size: .875rem;
+                                    font-weight: 500;
+                                    margin-bottom: .125rem;
+                                }
+
+                                .session-header_value{
+                                    font-size: 1.125rem;
+                                    font-weight: 500;
+                                    color:#ffffff;
+                                }
+                            }
+                    }
+                    .session-header_stats-stat-offset{
+                        display: block;
+                        margin: 0;
+                        max-width: 7.5rem;
+                        min-width: 7.5rem;
+                    }
+                    
+                    
+                }
+                .session-header > *{
+                    padding-bottom: .5rem;
+                     padding-top: .5rem;
+                }
+            }
+
+            .gamereport-list_entries{
+                border-left: 0;
+                margin: 0;
+                padding: .125rem 0;
+                background: #2B2F33;
+
+                &:not(:last-child){
+                    margin-bottom: .125rem;
+                }
+
+                .match-row{
+                    align-items: center;
+                    display: flex;
+                    min-height: 4.5rem;
+                    overflow: hidden;
+                    padding: 0 4rem 0 0;
+                    position: relative;
+                    white-space: nowrap;
+                    &::before{
+                        border-radius: 0 .25rem .25rem 0;
+                        bottom: 0;
+                        content: "";
+                        left: 0;
+                        position: absolute;
+                        top: 0;
+                        width: 2px;
+                    }
+
+                    .match-row_placement{
+                        color: #737880;
+                        font-size: 2.25rem;
+                        font-weight: 700;
+                        padding-left: 1.5rem;
+                        width: 7.5rem;
+                    }
+
+                    .match-row_data{
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        flex-flow: wrap;
+
+                        .match-row_details{
+                            flex: unset;
+                            width: 11rem;
+
+                            .match-row_label{
+                                color:#BAC3CF;
+                                display: block;
+                                font-size: .875rem;
+                                font-weight: 500;
+                                margin-bottom: .125rem;
+                            }
+
+                            .match-row_value{
+                                display: block;
+                                font-size: 1.125rem;
+                                font-weight: 500;
+                                min-width: 3.25rem;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                color:#ffffff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
