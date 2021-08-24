@@ -1,0 +1,64 @@
+.imageCenter{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wz_cover{
+    height: 20rem;
+    background-position: 50%;
+    background-size: cover;
+    .wz_cover-overlay{
+        height:100%;
+        background:linear-gradient(0deg, rgba(0,0,0,.65), transparent 150px);
+    }
+}
+
+.detail_container{
+    margin: -3.5rem auto -2.5rem;
+    display: flex;
+
+    .rand-avatar{
+        height: 6rem;
+        width: 6rem;
+        position: relative;
+        margin-right: 1.5rem;
+        
+        img{
+            display: block;
+            border: .25rem solid #ffffff;
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .user-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-bottom: 3rem;
+
+        .details_identity{
+            display: flex;
+            align-items: center;
+
+            .platform-icon{
+                height: 1.5rem;
+                width: 1.5rem;
+                margin-right: .75rem;
+                fill: #ffffff;
+                color:#ffffff;
+            }
+
+            .details_name{
+                font-size:2rem;
+                line-height: 1em;
+                color:#ffffff;
+            }
+        }
+    }
+}
+
+
+
